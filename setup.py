@@ -3,7 +3,7 @@ import os
 
 version = '0.1'
 
-setup(name='gisweb.iol.spezia',
+setup(name='iol.gisweb.spezia',
       version=version,
       description="Application for Iol Project Spezia",
       long_description=open("README.txt").read() + "\n" +
@@ -16,7 +16,7 @@ setup(name='gisweb.iol.spezia',
       keywords='plone iol spezia',
       author='Marco Carbone',
       author_email='marco.carbone@gmx.com',
-      url='https://github.com/mamogmx/gisweb.iol.spezia.git',
+      url='https://github.com/mamogmx/iol.gisweb.spezia.git',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['gisweb', 'gisweb.iol'],

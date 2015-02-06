@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<layers>
-  <layer name="gisweb.iol.spezia"
-    interface="gisweb.iol.spezia.interfaces.IIolAppsLayer" />
-</layers>
