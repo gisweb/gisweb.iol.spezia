@@ -19,13 +19,14 @@ setup(name='iol.gisweb.spezia',
       url='https://github.com/mamogmx/iol.gisweb.spezia.git',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
-      namespace_packages=['gisweb', 'gisweb.iol'],
+      namespace_packages=['iol', 'iol.gisweb'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
           'setuptools',
           'plone.api',
           'Products.CMFPlomino',
+          'iol.gisweb.utils'
           # -*- Extra requirements: -*-
       ],
       entry_points="""
