@@ -5,7 +5,7 @@ from AccessControl import ClassSecurityInfo
 from App.class_init import InitializeClass
 from Products.CMFPlomino.interfaces import IPlominoDocument, IPlominoForm
 from zope.component import getGlobalSiteManager
-from gisweb.iol.utils import config
+from iol.gisweb.utils import config
 from zope.component import getUtility
 from .interfaces import IIolApp
 
