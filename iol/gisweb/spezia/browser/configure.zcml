@@ -2,5 +2,19 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="iol.gisweb.spezia">
+    <browser:page
+       name="clonaFiera"
+       for="Products.CMFPlomino.interfaces.IPlominoDocument"
+       layer="..interfaces.IIolAppsLayer"
+       class=".views.clonaFiera"
+       permission="zope2.View"
+       />
+    <browser:page
+       name="numerazione"
+       for="Products.CMFPlomino.interfaces.IPlominoDocument"
+       layer="..interfaces.IIolAppsLayer"
+       class=".views.numerazione"
+       permission="zope2.View"
+       />   
 
 </configure>
