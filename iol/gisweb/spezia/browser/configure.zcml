@@ -15,6 +15,22 @@
        layer="..interfaces.IIolAppsLayer"
        class=".views.numerazione"
        permission="zope2.View"
-       />   
+       />
+
+    <browser:page
+       name="stampaFattura"
+       for="Products.CMFPlomino.interfaces.IPlominoDocument"
+       layer="..interfaces.IIolAppsLayer"
+       class=".views.stampaFattura"
+       permission="zope2.View"
+       />
+
+    <browser:page
+       name="stampaElencoFattureFile"
+       for="Products.CMFPlomino.interfaces.IPlominoDatabase"
+       layer="..interfaces.IIolAppsLayer"
+       class=".views.stampaElencoFattureFile"
+       permission="zope2.View"
+       />          
 
 </configure>

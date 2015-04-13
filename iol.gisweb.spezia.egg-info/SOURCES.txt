@@ -19,5 +19,6 @@ iol/gisweb/spezia/setuphandlers.py
 iol/gisweb/spezia/tests.py
 iol/gisweb/spezia/applications/__init__.py
 iol/gisweb/spezia/applications/default.py
+iol/gisweb/spezia/applications/fiere.py
 iol/gisweb/spezia/browser/__init__.py
 iol/gisweb/spezia/browser/views.py
