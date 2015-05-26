@@ -1,0 +1,33 @@
+{
+  "config": {
+    "mailhost": "smtps.pec.mail-certificata.eu",
+    "user": "amministrazione@pec.gisweb.it",
+    "pwd": "P3cg1sw3b",
+    "from": "amministrazione@pec.gisweb.it",
+    "port": "465",
+    "tls": 0,
+    "ssl": 1
+  },
+  "mail": {
+    "richiesta_accreditamento": {
+      "object": "Richiesta accreditamento per servizio IstanzeOnLine effettuata",
+      "attach": "",
+      "text": "La richiesta di accreditamento e' stata inviata con successo al sistema informativo IOL. Da questo momento e' abilitato alla presentazione di pratiche online al seguente link %(link_pratica)s"
+    },
+    "sospensione_accreditamento": {
+      "object": "Richiesta di accreditamento per servizio IstanzeOnLine sospesa",
+      "attach": "",
+      "text": "La richiesta di accreditamento al sistema informativo IOL e' stata sospesa."
+    },
+    "ripristina_accreditamento": {
+      "object": "Richiesta di accreditamento per servizio IstanzeOnLine ripristinata",
+      "attach": "",
+      "text": "La richiesta di accreditamento al sistema informativo IOL e' stata ripristinata."
+    },
+    "autorizzazione_accreditamento": {
+      "object": "Richiesta di accreditamento per servizio Istanze OnLine autorizzata",
+      "attach": "",
+      "text": "Complimenti La richiesta di accreditamento al sistema informativo IOL e' stata autorizzata. Da questo momento puo' presentare istanze online al seguente link %(link_pratica)s"
+    }
+  }
+}

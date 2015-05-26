@@ -1,0 +1,41 @@
+{
+    "initial_state":"richiedenti",
+    "initial_actions":[],
+        "states":[
+        {
+            "action": "vai_richiedenti",
+            "label":"Richiedenti",
+            "state":"richiedenti"
+        },
+        {
+            "action": "vai_ubicazione",
+            "label":"Ubicazione",
+            "state":"ubicazione"
+        },
+        {
+            "action": "vai_dati",
+            "label":"Dati Richiesta",
+            "state":"dati"
+        },
+        {
+            "action": "vai_altri_soggetti",
+            "label":"Altri Soggetti",
+            "state":"altri_soggetti"
+        },
+        {
+            "action": "vai_oneri",
+            "label":"Oneri",
+            "state":"oneri"
+        },
+        {
+            "action": "vai_allegati",
+            "label":"Allegati",
+            "state":"allegati"
+        },
+        {
+            "action": "vai_completata",
+            "label":"Resoconto Finale",
+            "state":"completata"
+        }
+    ]
+}

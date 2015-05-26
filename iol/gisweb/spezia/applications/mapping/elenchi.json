@@ -1,0 +1,13 @@
+{
+  "destuso":{
+    "": -1,
+    "RESIDENZIALE": 1,
+    "TURISTICA": 2,
+    "COMMERCIALE  DIREZIONALE": 4,
+    "INDUSTRIALE": 5,
+    "PARK DEPOSITI": 6,
+    "SERVIZI PRIVATI": 7,
+    "TURISMO CONVENZIONATO": 3,
+    "SERVIZI TURISTICI": 8
+  }
+}

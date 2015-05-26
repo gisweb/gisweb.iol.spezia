@@ -1,0 +1,23 @@
+{
+  "config": {
+    "mailhost": "smtps.pec.mail-certificata.eu",
+    "user": "amministrazione@pec.gisweb.it",
+    "pwd": "P3cg1sw3b",
+    "from": "amministrazione@pec.gisweb.it",
+    "port": "465",
+    "tls": 0,
+    "ssl": 1
+  },
+  "mail": {
+    "invia_domanda": {
+      "object": "Invio della pratica avvenuto ",
+      "attach": "",
+      "text": "La %(nome_app)s da lei trasmessa a nome %(richiedente_cognome)s %(richiedente_nome)s e' stata recepita dal sistema. Seguira' notifica di protocollo. Questo messaggio e' stato generato da un sistema automatizzato, si prega pertanto di non rispondere. Per informazioni far riferimento al sito %(link_pratica)s"
+    },
+    "protocollata": {
+      "object": "Pratica protocollata",
+      "attach": "",
+      "text": "La %(nome_app)s da lei trasmessa a nome %(richiedente_cognome)s %(richiedente_nome)s e' stata recepita agli atti Comunali con Protocollo n. %(numero_protocollo)s del %(data_protocollo)s. Questo messaggio e' stato generato da un sistema automatizzato, si prega pertanto di non rispondere. Per informazioni far riferimento al sito %(link_pratica)s"
+    }
+  }
+}

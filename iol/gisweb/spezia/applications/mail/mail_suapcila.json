@@ -1,0 +1,58 @@
+{
+  "config": {
+    "mailhost": "mail.postecert.it",
+    "user": "posta@pec.comune.savona.it",
+    "pwd": "Savonapos1",
+    "from": "posta@pec.comune.savona.it",
+    "port": "465",
+    "tls": 0,
+    "ssl": 1
+  },
+    "mail": {
+    "invia_domanda": {
+      "object": "Invio della pratica avvenuto",
+      "attach": "",
+      "text": "La Comunicazione di Inizio Lavori Asseverata - SUAP da lei trasmessa e' stata recepita dal sistema. Seguira' notifica di protocollo. Questo messaggio e' stato generato da un sistema automatizzato, si prega pertanto di non rispondere. Per informazioni far riferimento al sito %(link_pratica)s"
+    },
+    "invia_domanda_integrazione": {
+      "object": "Invio della pratica avvenuto",
+      "attach": "",
+      "text": "L'integrazione alla pratica n. %(numero_pratica)s da lei trasmessa e' stata recepita dal sistema. Seguira' notifica di protocollo. Questo messaggio e' stato generato da un sistema automatizzato, si prega pertanto di non rispondere. Per informazioni far riferimento al sito %(link_pratica)s"
+    },
+    "invia_domanda_fine": {
+      "object": "Invio della pratica avvenuto",
+      "attach": "",
+      "text": "La Comunicazione di Fine Lavori della pratica n. %(numero_pratica)s da lei trasmessa e' stata recepita dal sistema. Seguira' notifica di protocollo. Questo messaggio e' stato generato da un sistema automatizzato, si prega pertanto di non rispondere. Per informazioni far riferimento al sito %(link_pratica)s"
+    },
+    "invia_domanda_inizio": {
+      "object": "Invio della pratica avvenuto",
+      "attach": "",
+      "text": "La Comunicazione di Inizio Lavori della pratica n. %(numero_pratica)s e' stato recepito dal sistema. Seguira' notifica di protocollo. Questo messaggio e' stato generato da un sistema automatizzato, si prega pertanto di non rispondere. Per informazioni far riferimento al sito %(link_pratica)s"
+    },
+    "invia_integrazione": {
+      "object": "Invio della pratica avvenuto",
+      "attach": "",
+      "text": "L'integrazione da lei trasmessa e' stata recepita dal sistema. Seguira' notifica di protocollo. Questo messaggio e' stato generato da un sistema automatizzato, si prega pertanto di non rispondere. Per informazioni far riferimento al sito %(link_pratica)s"
+    },
+    "protocollata_integrazione": {
+      "object": "Pratica protocollata",
+      "attach": "",
+      "text": "L'integrazione della pratica n. %(numero_pratica)s da lei trasmessa in data %(data_presentazione)s e' stata recepita agli atti Comunali con Protocollo n. %(numero_protocollo)s del %(data_protocollo)s. Questo messaggio e' stato generato da un sistema automatizzato, si prega pertanto di non rispondere. Per informazioni far riferimento al sito %(link_pratica)s"
+    },
+    "protocollata_fine_lavori": {
+      "object": "Pratica protocollata",
+      "attach": "",
+      "text": "La Comunicazione di Fine Lavori della pratica n. %(numero_pratica)s da lei trasmessa in data %(data_presentazione)s e' stata recepita agli atti Comunali con Protocollo n. %(numero_protocollo)s del %(data_protocollo)s. Questo messaggio e' stato generato da un sistema automatizzato, si prega pertanto di non rispondere. Per informazioni far riferimento al sito %(link_pratica)s"
+    },
+    "protocollata_inizio_lavori": {
+      "object": "Pratica protocollata",
+      "attach": "",
+      "text": "La Comunicazione di Inizio Lavori della pratica n. %(numero_pratica)s da lei trasmessa in data %(data_presentazione)s e' stata recepita agli atti Comunali con Protocollo n. %(numero_protocollo)s del %(data_protocollo)s. Questo messaggio e' stato generato da un sistema automatizzato, si prega pertanto di non rispondere. Per informazioni far riferimento al sito %(link_pratica)s"
+    },
+    "protocollata": {
+      "object": "Pratica protocollata",
+      "attach": "",
+      "text": "La Comunicazione di Inizio Lavori Asseverata - SUAP da lei trasmessa in data %(data_presentazione)s e' stata recepita agli atti Comunali con Protocollo n. %(numero_protocollo)s del %(data_protocollo)s. Questo messaggio e' stato generato da un sistema automatizzato, si prega pertanto di non rispondere. Per informazioni far riferimento al sito %(link_pratica)s"
+    }
+  }
+}

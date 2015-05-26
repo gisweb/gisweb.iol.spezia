@@ -1,0 +1,482 @@
+{
+  "richiedente": {
+    "albo": "",
+    "albonumero": "",
+    "alboprov": "",
+    "app": "fisica_app",
+    "cap": "fisica_cap",
+    "capd": "giuridica_cap",
+    "ccia": "",
+    "cciaprov": "",
+    "cedile": "",
+    "cedileprov": "",
+    "cellulare": "fisica_cellulare",
+    "cip": "",
+    "cittadinanza": "fisica_cittadinanza",
+    "civico": "fisica_civico",
+    "civicod": "giuridica_civico",
+    "codfis": "fisica_cf",
+    "codfisd": "giuridica_cf",
+    "cognome": "fisica_cognome",
+    "collaudatore": "",
+    "collaudatore_ca": "",
+    "comunato": "fisica_comune_nato",
+    "comune": "fisica_comune",
+    "comuned": "giuridica_comune",
+    "comunicazioni": "",
+    "concessionario": "",
+    "data_cip": "",
+    "datanato": "fisica_data_nato",
+    "denunciante": "",
+    "direttore": "",
+    "economia_diretta": "",
+    "email": "fisica_email",
+    "esecutore": "",
+    "fax": "",
+    "geologo": "",
+    "inail": "",
+    "inailprov": "",
+    "indirizzo": "fisica_indirizzo",
+    "inps": "",
+    "inpsprov": "",
+    "nome": "fisica_nome",
+    "note": "",
+    "pec": "fisica_pec",
+    "piva": "giuridica_piva",
+    "pratica": "",
+    "progettista": "",
+    "progettista_ca": "",
+    "proprietario": "",
+    "prov": "fisica_provincia",
+    "provd": "giuridica_provincia",
+    "provnato": "fisica_provincia_nato",
+    "ragsoc": "giuridica_denominazione",
+    "resp_abuso": "",
+    "richiedente": "",
+    "sede": "giuridica_indirizzo",
+    "sesso": "fisica_sesso",
+    "sicurezza": "",
+    "telefono": "fisica_telefono",
+    "titolo": "fisica_titolo",
+    "titolo_note": "",
+    "titolod": "giuridica_qualita",
+    "titolod_note": "",
+    "voltura": ""
+  },
+  "progettista": {
+    "albo": "progettista_albo",
+    "albonumero": "progettista_albo_numero",
+    "alboprov": "progettista_albo_prov",
+    "app": "progettista_app",
+    "cap": "progettista_cap",
+    "capd": "",
+    "ccia": "progettista_cciaa_numero",
+    "cciaprov": "progettista_cciaa",
+    "cedile": "progettista_edile_numero",
+    "cedileprov": "progettista_edile_prov",
+    "cellulare": "progettista_cellulare",
+    "cip": "",
+    "cittadinanza": "",
+    "civico": "progettista_civico_residenza",
+    "civicod": "progettista_civico",
+    "codfis": "progettista_cf",
+    "codfisd": "",
+    "cognome": "progettista_cognome",
+    "collaudatore": "",
+    "collaudatore_ca": "",
+    "comunato": "progettista_comune_nato",
+    "comune": "progettista_comune_residenza",
+    "comuned": "progettista_comune",
+    "comunicazioni": "",
+    "concessionario": "",
+    "data_cip": "",
+    "datanato": "progettista_data_nato",
+    "denunciante": "",
+    "direttore": "",
+    "economia_diretta": "",
+    "email": "progettista_email",
+    "esecutore": "",
+    "fax": "progettista_fax",
+    "geologo": "",
+    "inail": "progettista_inail",
+    "inailprov": "",
+    "indirizzo": "progettista_indirizzo_residenza",
+    "inps": "progettista_inps",
+    "inpsprov": "",
+    "nome": "progettista_nome",
+    "note": "",
+    "pec": "progettista_pec",
+    "piva": "progettista_piva",
+    "progettista": "",
+    "progettista_ca": "",
+    "proprietario": "",
+    "prov": "progettista_provincia_residenza",
+    "provd": "progettista_provincia",
+    "provnato": "progettista_provincia_nato",
+    "ragsoc": "progettista_denominazione",
+    "resp_abuso": "",
+    "richiedente": "",
+    "sede": "progettista_indirizzo",
+    "sesso": "progettista_sesso",
+    "sicurezza": "",
+    "telefono": "progettista_telefono",
+    "titolo": "progettista_ruolo",
+    "titolo_note": "",
+    "titolod": "progettista_qualita",
+    "titolod_note": "",
+    "voltura": ""
+  },
+  "direttore": {
+    "albo": "direttore_albo",
+    "albonumero": "direttore_albo_numero",
+    "alboprov": "direttore_albo_prov",
+    "app": "direttore_app",
+    "cap": "direttore_cap",
+    "capd": "",
+    "ccia": "direttore_cciaa_numero",
+    "cciaprov": "direttore_cciaa",
+    "cedile": "direttore_edile_numero",
+    "cedileprov": "direttore_edile_prov",
+    "cellulare": "direttore_cellulare",
+    "cip": "",
+    "cittadinanza": "",
+    "civico": "direttore_civico_residenza",
+    "civicod": "direttore_civico",
+    "codfis": "direttore_cf",
+    "codfisd": "",
+    "cognome": "direttore_cognome",
+    "collaudatore": "",
+    "collaudatore_ca": "",
+    "comunato": "direttore_comune_nato",
+    "comune": "direttore_comune_residenza",
+    "comuned": "direttore_comune",
+    "comunicazioni": "",
+    "concessionario": "",
+    "data_cip": "",
+    "datanato": "direttore_data_nato",
+    "denunciante": "",
+    "direttore": "",
+    "economia_diretta": "",
+    "email": "direttore_email",
+    "esecutore": "",
+    "fax": "direttore_fax",
+    "geologo": "",
+    "inail": "direttore_inail",
+    "inailprov": "",
+    "indirizzo": "direttore_indirizzo_residenza",
+    "inps": "direttore_inps",
+    "inpsprov": "",
+    "nome": "direttore_nome",
+    "note": "",
+    "pec": "direttore_pec",
+    "piva": "direttore_piva",
+    "progettista": "",
+    "progettista_ca": "",
+    "proprietario": "",
+    "prov": "direttore_provincia_residenza",
+    "provd": "direttore_provincia",
+    "provnato": "direttore_provincia_nato",
+    "ragsoc": "direttore_denominazione",
+    "resp_abuso": "",
+    "richiedente": "",
+    "sede": "direttore_indirizzo",
+    "sesso": "direttore_sesso",
+    "sicurezza": "",
+    "telefono": "direttore_telefono",
+    "titolo": "direttore_ruolo",
+    "titolo_note": "",
+    "titolod": "direttore_qualita",
+    "titolod_note": "",
+    "voltura": ""
+  },
+  "esecutore": {
+    "albo": "esecutore_albo",
+    "albonumero": "esecutore_albo_numero",
+    "alboprov": "esecutore_albo_prov",
+    "app": "esecutore_app",
+    "cap": "esecutore_cap",
+    "capd": "",
+    "ccia": "esecutore_cciaa_numero",
+    "cciaprov": "esecutore_cciaa",
+    "cedile": "esecutore_edile_numero",
+    "cedileprov": "esecutore_edile_prov",
+    "cellulare": "esecutore_cellulare",
+    "cip": "",
+    "cittadinanza": "",
+    "civico": "esecutore_civico_residenza",
+    "civicod": "esecutore_civico",
+    "codfis": "esecutore_cf",
+    "codfisd": "",
+    "cognome": "esecutore_cognome",
+    "collaudatore": "",
+    "collaudatore_ca": "",
+    "comunato": "esecutore_comune_nato",
+    "comune": "esecutore_comune_residenza",
+    "comuned": "esecutore_comune",
+    "comunicazioni": "",
+    "concessionario": "",
+    "data_cip": "",
+    "datanato": "esecutore_data_nato",
+    "denunciante": "",
+    "direttore": "",
+    "economia_diretta": "",
+    "email": "esecutore_email",
+    "esecutore": "",
+    "fax": "esecutore_fax",
+    "geologo": "",
+    "inail": "esecutore_inail",
+    "inailprov": "",
+    "indirizzo": "esecutore_indirizzo_residenza",
+    "inps": "esecutore_inps",
+    "inpsprov": "",
+    "nome": "esecutore_nome",
+    "note": "",
+    "pec": "esecutore_pec",
+    "piva": "esecutore_piva",
+    "progettista": "",
+    "progettista_ca": "",
+    "proprietario": "",
+    "prov": "esecutore_provincia_residenza",
+    "provd": "esecutore_provincia",
+    "provnato": "esecutore_provincia_nato",
+    "ragsoc": "esecutore_denominazione",
+    "resp_abuso": "",
+    "richiedente": "",
+    "sede": "esecutore_indirizzo",
+    "sesso": "esecutore_sesso",
+    "sicurezza": "",
+    "telefono": "esecutore_telefono",
+    "titolo": "esecutore_ruolo",
+    "titolo_note": "",
+    "titolod": "esecutore_qualita",
+    "titolod_note": "",
+    "voltura": ""
+  },
+  "indirizzo": {
+    "via": "civico_via",
+    "civico": "civico_civico",
+    "interno": "civico_interno"
+  },
+  "nct": {
+    "foglio": "nct_foglio",
+    "mappale": "nct_particella"
+  },
+  "nceu": {
+    "foglio": "nceu_foglio",
+    "mappale": "nceu_mappale",
+    "sub": "nceu_subalterno"
+  },
+  "allegato": {
+    "500": [
+      "scia_ricevuta_versamento"
+    ],
+    "501": [
+      "allegato_ditta_esecutrice"
+    ],
+    "502": [
+      "allegato_art90_autocertificazione",
+      "allegato_art90_asl"
+    ],
+    "503": [
+      "allegato_relazione_tecnica_progettista"
+    ],
+    "504": [
+      "allegato_att_conform_urbanistica"
+    ],
+    "505": [
+      "allegato_atto_impegno_parcheggi"
+    ],
+    "506": [
+      "allegato_impianto"
+    ],
+    "507": [
+      "allegato_arpal"
+    ],
+    "508": [
+      "allegati_elab_cartografici"
+    ],
+    "509": [
+      "allegati_elab_grafici"
+    ],
+    "510": [
+      "allegati_visura_plan_catastale"
+    ],
+    "511": [
+      "allegati_calcoli_statici"
+    ],
+    "512": [
+      "allegati_doc_foto_stato"
+    ],
+    "513": [
+      "allegati_doc_illustrativa"
+    ],
+    "514": [
+      "allegati_dich_conformita"
+    ],
+    "515": [
+      "allegati_prog_imp_termici"
+    ],
+    "516": [
+      "allegati_doc_prescritta_art3"
+    ],
+    "517": [
+      "allegati_prog_illumino_tecnico"
+    ],
+    "518": [
+      "allegati_autocert_scavo_rocce"
+    ],
+    "519": [
+      "allegati_indag_geo_tecnica"
+    ],
+    "520": [
+      "allegati_atti_risp_energetico"
+    ],
+    "521": [
+      "allegati_rel_idraulica"
+    ],
+    "522": [
+      "allegati_computo_superf",
+      "versamento_contributo_allegato",
+      "versamento_contributo_elaborato"
+    ],
+    "523": [
+      "allegati_computo_parcheggi"
+    ],
+    "524": [
+      "allegati_elab_parcheggi"
+    ],
+    "525": [
+      "allegati_standards_urbanistici"
+    ],
+    "526": [
+      "allegati_standards_pubblici"
+    ],
+    "527": [
+      "allegati_versam_parcheggi"
+    ],
+    "528": [
+      "allegati_pareri_assensi",
+      "parere_allegato_01",
+      "parere_allegato_02",
+      "parere_allegato_03",
+      "parere_allegato_04",
+      "parere_allegato_05",
+      "parere_allegato_06",
+      "parere_allegato_07",
+      "parere_allegato_08",
+      "parere_allegato_09",
+      "parere_allegato_010",
+      "parere_allegato_011",
+      "parere_allegato_012",
+      "parere_allegato_013",
+      "parere_allegato_014",
+      "parere_allegato_altro_01",
+      "parere_allegato_altro_02"
+    ],
+    "529": [
+      "allegati_atti_impegno",
+      "vincolo_allegato_01",
+      "vincolo_allegato_02",
+      "vincolo_allegato_03",
+      "vincolo_allegato_04",
+      "vincolo_allegato_05",
+      "vincolo_allegato_06"
+    ],
+    "530": [
+      "allegati_ricevuta_istat"
+    ],
+    "531": [
+      "firma_digitale_impresa_ci",
+      "firma_digitale_impresa_procura",
+      "firma_digitale_ci",
+      "firma_digitale_procura",
+      "ci_richiedente",
+      "ci_progettista",
+      "allegato_assenso_proprietario",
+      "allegato_ci_proprietario"
+    ],
+    "532": [
+      "comunicazione_digitale"
+    ],
+    "533": [
+      "allegato_versam_oblazione"
+    ],
+    "534": [
+      "asseverata_digitale"
+    ],
+    "535": [
+      "allegati_altra_doc",
+      "allegati_integrativi"
+    ],
+    "537": [
+      "allegato_copia_notifica_preliminare"
+    ],
+    "538": [
+      "nuova_unita_elaborato_allegato",
+      "cambio_uso_elaborato_allegato"
+    ],
+    "539": [
+      "cambio_uso_versamento_allegato",
+      "nuova_unita_versamento_allegato"
+    ],
+    "541": [
+      "allegato_collaudo_finale"
+    ],
+    "542": [
+      "allegato_variazione_catastale"
+    ],
+    "543": [
+      "allegato_certificato_collaudo"
+    ],
+    "544": [
+      "allegato_dichi_conformita"
+    ],
+    "545": [
+      "allegato_autorizzazione_smaltimento"
+    ],
+    "546": [
+      "allegato_allacciamento_servizi"
+    ],
+    "547": [
+      "allegato_certificato_re_art"
+    ],
+    "548": [
+      "allegato_dich_conf_direttore"
+    ],
+    "549": [
+      "allegato_verbale_visita"
+    ],
+    "550": [
+      "allegato_dich_rispetto_direttive"
+    ],
+    "551": [
+      "allegato_altro_integrazione"
+    ],
+    "552": [
+      "allegato_altro_inizio"
+    ],
+    "553": [
+      "allegato_altro_fine"
+    ],
+    "554": [
+      "documento_firmato_integrazione"
+    ],
+    "555": [
+      "documento_firmato_inizio"
+    ],
+    "556": [
+      "documento_firmato_fine"
+    ],
+    "557": [
+      "allegato_ditta_esecutrice"
+    ],
+    "558": [
+      "allegato_autocert_ditta",
+      "allegato_copia_asl"
+    ],
+    "559": [
+      "allegato_ricevuta_versamento_inizio"
+    ]     
+    
+  }
+}
