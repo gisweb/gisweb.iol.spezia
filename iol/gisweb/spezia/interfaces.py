@@ -12,3 +12,8 @@ class IIolAppsLayer(Interface):
     """Marker interface for the Browserlayer
     """
 
+
+class IIolPraticaWeb(Interface):
+    """
+    Marker interface for iol praticaweb
+    """

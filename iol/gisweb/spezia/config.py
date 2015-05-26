@@ -5,3 +5,4 @@ APP_FIELD_DEFAULT_VALUE = 'default'
 USER_CREDITABLE_FIELD = 'iol_accreditabile'
 USER_UNIQUE_FIELD = 'fisica_cf'
 STATUS_FIELD = 'wf_iol'
+WS_PRATICAWEB_URL = "http://webservice.gisweb.sigmater/wspraticaweb/spezia.wsPraticaweb.php?wsdl"

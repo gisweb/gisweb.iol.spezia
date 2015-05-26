@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from Products.CMFCore.utils import getToolByName
 from plone.dexterity.browser.view import DefaultView
 from plone import api
@@ -5,12 +6,156 @@ from zope.event import notify
 from zope.component import getGlobalSiteManager
 from zope.component import getUtility
 from iol.gisweb.spezia.IolApp import IolApp
+from iol.gisweb.spezia.IolPraticaWeb import IolWSPraticaWeb
 from five import grok
 from Products.CMFPlomino.interfaces import IPlominoDocument
 from AccessControl import ClassSecurityInfo
 from datetime import datetime
+import random
+import simplejson as json
+import DateTime
 
-# 
+try:
+    from iol.gisweb.spezia.configlocal import WS_PRATICAWEB_URL
+except:
+    from iol.gisweb.spezia.config import WS_PRATICAWEB_URL
+
+class inviaPW(object):
+
+    def __init__(self,context,request):
+        self.context = context
+        self.request = request
+
+    def __call__(self):
+        doc = self.aq_parent
+        url = "%s&test=%d" %(WS_PRATICAWEB_URL,random.randint(1,100000))
+        wsDoc = IolWSPraticaWeb(doc,url)
+
+        tipo_richiesta = doc.getItem('iol_tipo_richiesta','comunicazione')
+        if tipo_richiesta == 'integrazione':
+            res = wsDoc.invia_integrazione()
+            res = dict(res)
+            if res["success"]:
+                iApp = IolApp(doc)
+                r = iApp.inviaSmtpMail('protocollata_integrazione')
+                wftool = getToolByName(doc, 'portal_workflow')
+                try:
+                    wftool.doActionFor(doc, 'i1_protocolla')
+                except:
+                    pass
+                message = u"La richiesta di integrazione e' stata inviata correttamente al Servizio Edilizia"
+                t = 'info'
+            else:
+                message = u"Si sono verificati alcuni errori durante l'invio della pratica"
+                t = 'error'
+        elif tipo_richiesta == 'inizio_lavori':
+            res = wsDoc.aggiungi_inizio_lavori()
+            res = dict(res)
+            if res["success"]:
+                iApp = IolApp(doc)
+                r = iApp.inviaSmtpMail('protocollata_inizio_lavori')
+                wftool = getToolByName(doc, 'portal_workflow')
+                wftool.doActionFor(doc, 'i1_protocolla')
+                message = u"La comunicazione di inizio lavori e' stata inviata correttamente al Servizio Edilizia"
+                t = 'info'
+            else:
+                message = u"Si sono verificati alcuni errori durante l'invio della comunicazione"
+                t = 'error'
+
+        elif tipo_richiesta == 'fine_lavori':
+            res = wsDoc.aggiungi_fine_lavori()
+            res = dict(res)
+            if res["success"]:
+                iApp = IolApp(doc)
+                r = iApp.inviaSmtpMail('protocollata_fine_lavori')
+                wftool = getToolByName(doc, 'portal_workflow')
+                wftool.doActionFor(doc, 'i1_protocolla')
+                message = u"La comunicazione di fine lavori è stata inviata correttamente al Servizio Edilizia"
+                t = 'info'
+            else:
+                message = u"Si sono verificati alcuni errori durante l'invio della comunicazione"
+                t = 'error'
+
+        else:
+            res = wsDoc.aggiungi_pratica()
+            res = dict(res)
+            if res["success"]:
+                iApp = IolApp(doc)
+                r = iApp.inviaSmtpMail('protocollata')
+                doc.setItem("numero_pratica",res["numero_pratica"])
+                wftool = getToolByName(doc, 'portal_workflow')
+                wftool.doActionFor(doc, 'i1_protocolla')
+                message = u"La domanda è stata inviata correttamente al Servizio Edilizia con Numero di pratica %s" % res["numero_pratica"]
+                t = 'info'
+            else:
+                message = u"Si sono verificati alcuni errori durante l'invio della pratica"
+                t = 'error'
+        api.portal.show_message(message=message, type=t, request=doc.REQUEST)
+        port = api.portal.get()
+        doc.REQUEST.RESPONSE.redirect(port['scrivania-protocolli'].absolute_url())
+        #doc.REQUEST.RESPONSE.redirect(doc.absolute_url())
+
+class inviaDomanda(object):
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+
+    def __call__(self):
+        doc = self.aq_parent
+        tipo_richiesta = doc.getItem('iol_tipo_richiesta','comunicazione')
+        if tipo_richiesta == 'inizio_lavori':
+            iApp = IolApp(doc)
+            res = iApp.inviaSmtpMail('invia_domanda_inizio')
+        elif tipo_richiesta == 'fine_lavori':
+            iApp = IolApp(doc)
+            res = iApp.inviaSmtpMail('invia_domanda_fine')
+        elif tipo_richiesta == 'integrazione':
+            iApp = IolApp(doc)
+            res = iApp.inviaSmtpMail('invia_domanda_integrazione') 
+        else:
+            iApp = IolApp(doc)
+            res = iApp.inviaSmtpMail('invia_domanda')
+        if res['success']==0:
+            error = res["message"]
+            api.portal.show_message(message=error, type="warning", request=doc.REQUEST)
+        else:
+            doc.setItem('data_presentazione',DateTime.DateTime())
+            api.portal.show_message(message=u"Il messaggio è stato inviato correttamente", type="info", request=doc.REQUEST)
+
+        api.content.transition(doc,'h1_presenta')
+        api.portal.show_message(message=u"Il domanda è stata presentata correttamente", type="info", request=doc.REQUEST)
+        doc.REQUEST.RESPONSE.redirect(doc.absolute_url())
+
+# Returns Info about Wizard Workflow
+class wfWizardInfo(object):
+
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+        self.state = api.content.get_state(obj=self.aq_parent)
+
+    def __call__(self):
+        doc = self.aq_parent
+        aDoc = IolApp(doc)
+        res = aDoc.getWizardInfo()
+        #doc.REQUEST.RESPONSE.headers['Content-Type'] = 'application/json'
+        return json.dumps(res)
+
+class infoProcedimento(object):
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+
+
+    def __call__(self):
+        doc = self.aq_parent
+        url = "%s&test=%d" %(WS_PRATICAWEB_URL,random.randint(1,100000))
+        wsDoc = IolWSPraticaWeb(doc,url)
+        res = wsDoc.infoProcedimento()
+        return json.dumps(res,default=DateTime.DateTime.ISO,use_decimal=True)
+
+
+########## FIERE ##########################################
 class clonaFiera(object):
 
     def __init__(self, context, request):

@@ -31,6 +31,34 @@
        layer="..interfaces.IIolAppsLayer"
        class=".views.stampaElencoFattureFile"
        permission="zope2.View"
-       />          
+       />
+    <browser:page
+       name="wfWizardInfo"
+       for="Products.CMFPlomino.interfaces.IPlominoForm"
+       layer="..interfaces.IIolAppsLayer"
+       class=".views.wfWizardInfo"
+       permission="zope2.View"
+       />
+    <browser:page
+       name="inviaPraticaweb"
+       for="Products.CMFPlomino.interfaces.IPlominoDocument"
+       layer="..interfaces.IIolAppsLayer"
+       class=".views.inviaPW"
+       permission="zope2.View"
+     />
+    <browser:page
+       name="wfWizardInfo"
+       for="Products.CMFPlomino.interfaces.IPlominoDocument"
+       layer="..interfaces.IIolAppsLayer"
+       class=".views.wfWizardInfo"
+       permission="zope2.View"
+       />
+    <browser:page
+       name="presentaDomanda"
+       for="Products.CMFPlomino.interfaces.IPlominoDocument"
+       layer="..interfaces.IIolAppsLayer"
+       class=".views.inviaDomanda"
+       permission="zope2.View"
+       />                
 
 </configure>
