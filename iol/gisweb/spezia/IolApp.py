@@ -30,7 +30,7 @@ class IolApp(object):
     def __init__(self,obj):
         self.document = obj
         iDoc = IolDocument(obj)
-        self.tipo_app = self.document.getItem(config.APP_FIELD,config.APP_FIELD_DEFAULT_VALUE)
+        self.tipo_app = iDoc.getIolApp()
         self.path = os.path.dirname(os.path.abspath(__file__))
 
     def __call__(self, *args, **kwargs):
