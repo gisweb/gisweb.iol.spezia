@@ -269,3 +269,28 @@ class stampaElencoFattureFile(object):
         self.request.RESPONSE.headers['Content-type']='application/vnd.ms-excel' 
         self.request.RESPONSE.headers['Content-Disposition']='attachment;filename=elenco_fatture.csv'  
         return st
+
+
+security.declarePublic('deleteAttachmentIol')
+
+class deleteAttachmentIol(object):
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+    
+    def __call__(self,fieldname=None, filename=None):                 
+        doc = self.aq_parent
+        request = self.request
+        if request:
+            fieldname = request.get('field')
+            filename = request.get('filename')
+        if fieldname and filename:
+            current_files = doc.getItem(fieldname)
+            if current_files.has_key(filename):
+                del current_files[filename]
+                doc.setItem(fieldname, current_files)
+                doc.deletefile(filename)
+        if request:
+            self.request.RESPONSE.redirect(doc.absolute_url() + "/EditDocument")        
+                
+

@@ -59,6 +59,13 @@
        layer="..interfaces.IIolAppsLayer"
        class=".views.inviaDomanda"
        permission="zope2.View"
-       />                
+       />
+    <browser:page
+       name="deleteAttachmentIol"
+       for="Products.CMFPlomino.interfaces.IPlominoDocument"
+       layer="..interfaces.IIolAppsLayer"
+       class=".views.deleteAttachmentIol"
+       permission="zope2.View"
+       />                   
 
 </configure>
