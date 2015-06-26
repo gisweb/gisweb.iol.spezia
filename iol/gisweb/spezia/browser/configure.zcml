@@ -31,6 +31,13 @@
        layer="..interfaces.IIolAppsLayer"
        class=".views.stampaElencoFattureFile"
        permission="zope2.View"
-       />          
+       /> 
+    <browser:page
+       name="stampaElencoGraduatorie"
+       for="Products.CMFPlomino.interfaces.IPlominoDatabase"
+       layer="..interfaces.IIolAppsLayer"
+       class=".views.stampaElencoGraduatoria"
+       permission="zope2.View"
+       />             
 
 </configure>
