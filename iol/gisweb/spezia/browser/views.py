@@ -224,7 +224,7 @@ class stampaElencoFattureFile(object):
 
         campi = ['occupante_cognome','occupante_nome','occupante_indirizzo','occupante_cap','occupante_comune','occupante_cf','occupante_piva','','','numero_fattura','data_fattura','fattura_print','fiera_descrizione','quota_perc_iva_print','iva_print','imponibile_print','quota_esente_posta','','','','','','','','',''] 
                           
-        header = '''COGNOME;NOME;INDIRIZZO;CAP;CITTA;CODICE_FIS;PARTITAIVA;MOD_PAG;RIF_PROVV;NUM_FATT;DATA_FATT;TOTALE_FAT;DESCRIZ;PERC_IVA_1;IMPORTO_IVA;IMPONIB_1;QUOTA_POSTALE;PERC_IVA_2;IMPOSTA_2;IMPONIB_2;PERC_IVA_3;IMPOSTA_3;IMPONIB_3;DATA_SCAD;CDR;SEZ_IVA'''
+        header = '''COGNOME NOME    INDIRIZZO   CAP CITTA   CODICE_FIS  PARTITAIVA  MOD_PAG RIF_PROVV   NUM_FATT    DATA_FATT   TOTALE_FAT  DESCRIZ PERC_IVA_1  IMPORTO_IVA IMPONIB_1   QUOTA_POSTALE   PERC_IVA_2  IMPOSTA_2   IMPONIB_2   PERC_IVA_3  IMPOSTA_3   IMPONIB_3   DATA_SCAD   CDR SEZ_IVA'''
         tot=[]
         for res in results:
             ob = res.getObject()
@@ -249,7 +249,7 @@ class stampaElencoFattureFile(object):
                         else:
                             val = doc.getItem(campo,"")    
                             if isinstance(val,basestring):
-                                row.append(val)
+                                row.append(val.upper())
                             else: 
                                 row.append(str(val))
                     else:
@@ -265,9 +265,9 @@ class stampaElencoFattureFile(object):
 
         st = '%s\n' %(header)   
         for i in tot:    
-            st += '%s\n' %(';'.join(i))
-        self.request.RESPONSE.headers['Content-type']='application/vnd.ms-excel' 
-        self.request.RESPONSE.headers['Content-Disposition']='attachment;filename=elenco_fatture.csv'  
+            st += '%s\n' %('\t'.join(i))        
+        self.request.RESPONSE.headers['Content-type']='application/text' 
+        self.request.RESPONSE.headers['Content-Disposition']='attachment;filename=elenco_fatture.txt'  
         return st
 
 
