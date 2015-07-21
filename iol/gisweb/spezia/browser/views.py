@@ -270,6 +270,33 @@ class stampaElencoFattureFile(object):
         self.request.RESPONSE.headers['Content-Disposition']='attachment;filename=elenco_fatture.txt'  
         return st
 
+security.declarePublic('stampaElencoGraduatoria')       
+class stampaElencoGraduatoria(object):
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+    
+    def __call__(self,fiera):                 
+        db = self.aq_parent
+        
+        fiera = self.request.get('fiera')
+        graduatoria = db.resources.graduatoriaNoProprietari(fiera)
+        header = '''Posizione;Nominativo;Presenze;Data inizio attivita'''      
+        if graduatoria != dict():
+            testo = '%s\n' %(header)
+            for row in graduatoria['names']:
+                posizione = row['n']
+                cognome = row['graduato_cognome']
+                nome = row['graduato_nome']
+                punteggio = row['punteggio']
+                data_registrazione = row['data_registrazione']
+                row_text = ['%s;%s %s;%s;%s' %(posizione,cognome,nome,punteggio,data_registrazione)]
+                testo += '%s\n' %(';'.join(row_text))
+            self.request.RESPONSE.headers['Content-type']='application/vnd.ms-excel'
+            self.request.RESPONSE.headers['Content-Disposition']='attachment;filename=graduatoriaFiera%s.csv' %(fiera)   
+        return testo        
+
+
 
 security.declarePublic('deleteAttachmentIol')
 
