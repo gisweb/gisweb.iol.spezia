@@ -4,6 +4,8 @@ from zope import component
 from .interfaces import IIolApp, IIolPraticaWeb
 from .applications.default import defaultApp, defaultWsClient
 from .applications.fiere import fiereApp
+from .applications.sciaSuap import sciaSuapApp
+from .applications.autorizzazioneSuap import autorizzazioneSuapApp
 from .applications.scia import sciaApp, sciaWsClient
 from .applications.cila import cilaApp, cilaWsClient
 from .applications.suapcila import suapcilaApp, suapcilaWsClient
@@ -42,6 +44,12 @@ gsm.registerUtility(app, IIolApp, 'parere')
 app = regolarizzazioneApp()
 gsm.registerUtility(app, IIolApp, 'regolarizzazione')
 
+app = sciaSuapApp()
+gsm.registerUtility(app, IIolApp, 'sciaSuap')
+
+app = autorizzazioneSuapApp()
+gsm.registerUtility(app, IIolApp, 'autorizzazioneSuap')
+
 #Register Named Utility For WebService Praticaweb
 app = defaultWsClient()
 gsm.registerUtility(app, IIolPraticaWeb, config.APP_FIELD_DEFAULT_VALUE)
@@ -66,3 +74,4 @@ gsm.registerUtility(app, IIolPraticaWeb, 'regolarizzazione')
 
 app = utentiApp()
 gsm.registerUtility(app, IIolApp, 'utenti')
+

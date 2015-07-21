@@ -49,7 +49,7 @@ class IolApp(object):
     security.declarePublic('numerazione')
     def numerazione(self,doc,item_name,query):
         app = 'default' 
-        utils = getUtility(IIolApp,app)
+        utils = getUtility(IIolApp,self.tipo_app)
         return utils.numerazione(doc,item_name,query)
 
     security.declarePublic('stampaFattura')
